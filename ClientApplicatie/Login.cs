@@ -18,7 +18,7 @@ namespace ClientApplication
             connectionThread.Start();
         }
 
-        //Wat gebeurt hier? Als de server niet draait geeft dit namelijk een error als de applicatie via "kruisje" wordt afgesloten
+        //error als de applicatie via "kruisje" wordt afgesloten, omdat statusLabel.Text dan niet meer bestaat
         private void ConnectThread()
         {
             while (statusLabel.Text != "Connected")

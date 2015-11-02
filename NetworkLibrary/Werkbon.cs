@@ -10,8 +10,13 @@ namespace NetworkLibrary
     public class Werkbon
     {
         public string werkbon { get; }
+        public DateTime aanmaakDatum;
+        public DateTime uitvoerDatum;
+        public Bedrijf bedrijf;
+        public string werkomschrijving;
+        public List<User> werknemers;
 
-        public Werkbon(string werkbon)
+        public Werkbon(string werkbon, Bedrijf bedrijf)
         {
             this.werkbon = werkbon;
         }

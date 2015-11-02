@@ -9,7 +9,7 @@ namespace NetworkLibrary
     [Serializable]
     public class Werkopdracht
     {
-        private string werkbon;
+        private string werkopdracht;
         private DateTime aanmaakDatum;
         private DateTime uitvoerDatum;
         private Bedrijf bedrijf;

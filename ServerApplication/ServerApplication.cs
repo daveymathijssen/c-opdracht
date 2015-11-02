@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using NetworkLibrary;
+using System.Linq;
 
 namespace ServerApplication
 {
@@ -72,9 +73,8 @@ namespace ServerApplication
         /// <summary>
         /// Update werkbon with given index and save werkbonlist to local file</summary>
         /// <param name="index">The index in the werkbonnenlist that needs to be updated</param>
-        public void UpdateWerkbon(int index)
+        public void UpdateWerkbon(int werkbonNummer)
         {
-            //werkbonnen.Fi
             FileIO.SaveWerkbonnen(werkbonnen);
         }
     }
