@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 namespace NetworkLibrary
 {
     [Serializable]
-    class Werkbon
+    public class Werkbon
     {
-        private string werkbon;
+        public string werkbon { get; }
+
+        public Werkbon(string werkbon)
+        {
+            this.werkbon = werkbon;
+        }
 
     }
 }

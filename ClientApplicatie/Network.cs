@@ -48,5 +48,17 @@ namespace ClientApplication
             this.loginOk = loginOk;
             this.accessRights = accessRights;
         }
+
+        public bool SaveWerkbonResponse()
+        {
+            return true;
+        }
+
+        public bool SaveWerkbon(Werkbon werkbon)
+        {
+            network.sendPacket(new PacketSaveWerkbon(werkbon));
+            Thread.Sleep(1000);
+            return true;
+        }
     }
 }

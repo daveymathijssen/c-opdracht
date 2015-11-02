@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace NetworkLibrary
 {
     [Serializable]
-    class Werkopdracht
+    public class Werkopdracht
     {
         private string werkbon;
         private DateTime aanmaakDatum;

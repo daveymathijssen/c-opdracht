@@ -20,6 +20,9 @@ namespace ServerApplication
         private X509Certificate2 cert = new X509Certificate2(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\NetworkLibrary\Cert\cyclemaster.pfx", "admin", X509KeyStorageFlags.MachineKeySet);
         public List<ServerClient> ConnectedClients { get; }
         public List<User> users = new List<User>();
+        public List<Werkbon> werkbonnen = new List<Werkbon>();
+        public List<Werkopdracht> werkopdrachten = new List<Werkopdracht>();
+        public List<Bedrijf> bedrijven = new List<Bedrijf>();
 
         public ServerApplication()
         {
@@ -55,6 +58,24 @@ namespace ServerApplication
         {
             users.Add(newUser);
             FileIO.SaveUsers(users);
+        }
+
+        /// <summary>
+        /// Add a new werkbon.</summary>
+        /// <param name="newWerkbon">The new werkbon that will be added</param>
+        public void AddNewWerkbon(Werkbon newWerkbon)
+        {
+            werkbonnen.Add(newWerkbon);
+            FileIO.SaveWerkbonnen(werkbonnen);
+        }
+
+        /// <summary>
+        /// Update werkbon with given index and save werkbonlist to local file</summary>
+        /// <param name="index">The index in the werkbonnenlist that needs to be updated</param>
+        public void UpdateWerkbon(int index)
+        {
+            //werkbonnen.Fi
+            FileIO.SaveWerkbonnen(werkbonnen);
         }
     }
 }

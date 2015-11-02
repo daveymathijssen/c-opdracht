@@ -7,18 +7,13 @@ using System.Threading.Tasks;
 namespace NetworkLibrary.Packets
 {
     [Serializable]
-    class PacketSaveWerkbon : Packet
+    public class PacketSaveWerkbon : Packet
     {
         private Werkbon werkbon;
 
         public PacketSaveWerkbon(Werkbon werkbon)
         {
             this.werkbon = werkbon;
-        }
-
-        public PacketSaveWerkbon()
-        {
-
         }
 
         public override void handleClientSide(ClientInterface clientInterface)

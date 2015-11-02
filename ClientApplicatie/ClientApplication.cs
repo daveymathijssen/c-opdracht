@@ -32,6 +32,7 @@ namespace ClientApplication
             else if((accessRights & viewRights) != 0)
             {
                 MessageBox.Show("Logged in as kitter");
+                tabPage1.Hide();
             }
         }
 

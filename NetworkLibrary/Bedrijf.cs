@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace NetworkLibrary
 {
     [Serializable]
-    class Bedrijf
+    public class Bedrijf
     {
         private string naam;
         private string bedrijfsNummer;

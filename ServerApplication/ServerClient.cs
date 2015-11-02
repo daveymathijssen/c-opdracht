@@ -90,5 +90,49 @@ namespace ServerApplication
             Console.WriteLine("Succesfully created new user {0} with password {1}.", newUser.username, newUser.password);
         }
 
+        public void SaveWerkbon(Werkbon werkbon)
+        {
+            int werkbonID = -1;
+            bool newWerkbon = true;
+
+            //Check if werkbon already exists, if so, update werkbon with existing ID
+            foreach (Werkbon oldWerkbon in server.werkbonnen)
+            {
+                werkbonID++;
+                if (werkbon.werkbon == oldWerkbon.werkbon)
+                {
+                    newWerkbon = false;
+                   // werkbonID = werkbon.werkbon.;
+                }
+            }
+            if (newWerkbon)
+            {
+                server.AddNewWerkbon(werkbon);
+                //NetworkCommunication.SendPacket(new PacketSaveWerkbonResponse(true, user.accessRights), stream);
+            }
+            else
+            {
+                //server.UpdateWerkbon();
+                //NetworkCommunication.SendPacket(new PacketSaveWerkbonResponse(true, user.accessRights), stream);
+
+            }
+
+
+
+            //if (PasswordHash.ValidatePassword(password, user.password))
+            //{
+            //   NetworkCommunication.SendPacket(new PacketLoginResponse(true, user.accessRights), stream);
+            //  Console.WriteLine("{0} succesfully logged in.", username);
+            //  this.user = user;
+            //  break;
+            //}
+            //else //wrong password
+            //{
+            //   Console.WriteLine("wrong password");
+            //  NetworkCommunication.SendPacket(new PacketLoginResponse(false, user.accessRights), stream);
+            // break;
+            //}
+        }
+
     }
 }
