@@ -14,3 +14,11 @@ D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\IP2\ServerApplication\bin\Debug\N
 D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\IP2\ServerApplication\bin\Debug\NetworkLibrary.pdb
 D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\IP2\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
 D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\IP2\ServerApplication\obj\Debug\ServerApplication.exe
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\bin\Debug\ServerApplication.exe.config
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\bin\Debug\ServerApplication.exe
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\bin\Debug\ServerApplication.pdb
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\bin\Debug\NetworkLibrary.dll
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\bin\Debug\NetworkLibrary.pdb
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\obj\Debug\ServerApplication.exe
+C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ServerApplication\obj\Debug\ServerApplication.pdb

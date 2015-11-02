@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterUser.Designer.cs">
+      <DependentUpon>AlterUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="NetworkConnect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlterUser.resx">
+      <DependentUpon>AlterUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientApplication.resx">
       <DependentUpon>ClientApplication.cs</DependentUpon>
     </EmbeddedResource>

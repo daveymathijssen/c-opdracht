@@ -8,7 +8,7 @@ namespace NetworkLibrary
     {
         public string username { get; set; }
         public string password { get; set; }
-        public AccessRights accessRights { get; }
+        public AccessRights accessRights { get; set; }
 
         /// <summary>
         /// Create a new user with given username, password and acces rights.</summary>

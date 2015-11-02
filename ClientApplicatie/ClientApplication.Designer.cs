@@ -30,96 +30,238 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientApplication));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.projectLijstTab = new System.Windows.Forms.TabPage();
+            this.werkOpdrachtenTab = new System.Windows.Forms.TabPage();
+            this.werkBonnenTab = new System.Windows.Forms.TabPage();
+            this.OpdrachtgeversTab = new System.Windows.Forms.TabPage();
+            this.gebruikersTab = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            this.Gebruikernaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Toegangsrechten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.addUserButton = new System.Windows.Forms.Button();
+            this.changeUserButton = new System.Windows.Forms.Button();
+            this.removeUserButton = new System.Windows.Forms.Button();
+            this.filterTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AgendaTab = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
+            this.gebruikersTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.projectLijstTab);
+            this.tabControl1.Controls.Add(this.werkOpdrachtenTab);
+            this.tabControl1.Controls.Add(this.werkBonnenTab);
+            this.tabControl1.Controls.Add(this.OpdrachtgeversTab);
+            this.tabControl1.Controls.Add(this.gebruikersTab);
+            this.tabControl1.Controls.Add(this.AgendaTab);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(862, 542);
+            this.tabControl1.Size = new System.Drawing.Size(431, 304);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // tabPage1
+            // projectLijstTab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(854, 516);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Projectlijst";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.projectLijstTab.Location = new System.Drawing.Point(4, 22);
+            this.projectLijstTab.Name = "projectLijstTab";
+            this.projectLijstTab.Padding = new System.Windows.Forms.Padding(3);
+            this.projectLijstTab.Size = new System.Drawing.Size(423, 278);
+            this.projectLijstTab.TabIndex = 0;
+            this.projectLijstTab.Text = "Projectlijst";
+            this.projectLijstTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // werkOpdrachtenTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(854, 516);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Werkopdrachten";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.werkOpdrachtenTab.Location = new System.Drawing.Point(4, 22);
+            this.werkOpdrachtenTab.Name = "werkOpdrachtenTab";
+            this.werkOpdrachtenTab.Padding = new System.Windows.Forms.Padding(3);
+            this.werkOpdrachtenTab.Size = new System.Drawing.Size(423, 278);
+            this.werkOpdrachtenTab.TabIndex = 1;
+            this.werkOpdrachtenTab.Text = "Werkopdrachten";
+            this.werkOpdrachtenTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // werkBonnenTab
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(854, 516);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Werkbonnen";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.werkBonnenTab.Location = new System.Drawing.Point(4, 22);
+            this.werkBonnenTab.Name = "werkBonnenTab";
+            this.werkBonnenTab.Size = new System.Drawing.Size(423, 278);
+            this.werkBonnenTab.TabIndex = 2;
+            this.werkBonnenTab.Text = "Werkbonnen";
+            this.werkBonnenTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // OpdrachtgeversTab
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(854, 516);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Opdrachtgevers";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.OpdrachtgeversTab.Location = new System.Drawing.Point(4, 22);
+            this.OpdrachtgeversTab.Name = "OpdrachtgeversTab";
+            this.OpdrachtgeversTab.Size = new System.Drawing.Size(423, 278);
+            this.OpdrachtgeversTab.TabIndex = 3;
+            this.OpdrachtgeversTab.Text = "Opdrachtgevers";
+            this.OpdrachtgeversTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // gebruikersTab
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(854, 516);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Gebruikers";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.gebruikersTab.Controls.Add(this.splitContainer1);
+            this.gebruikersTab.Location = new System.Drawing.Point(4, 22);
+            this.gebruikersTab.Name = "gebruikersTab";
+            this.gebruikersTab.Size = new System.Drawing.Size(423, 278);
+            this.gebruikersTab.TabIndex = 4;
+            this.gebruikersTab.Text = "Gebruikers";
+            this.gebruikersTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // splitContainer1
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(854, 516);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Agenda";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.usersDataGridView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Panel2.Controls.Add(this.filterTextBox);
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Size = new System.Drawing.Size(423, 278);
+            this.splitContainer1.SplitterDistance = 185;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // usersDataGridView
+            // 
+            this.usersDataGridView.AllowUserToAddRows = false;
+            this.usersDataGridView.AllowUserToDeleteRows = false;
+            this.usersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.usersDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Gebruikernaam,
+            this.Toegangsrechten});
+            this.usersDataGridView.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.usersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usersDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.usersDataGridView.Name = "usersDataGridView";
+            this.usersDataGridView.ReadOnly = true;
+            this.usersDataGridView.Size = new System.Drawing.Size(423, 185);
+            this.usersDataGridView.TabIndex = 0;
+            // 
+            // Gebruikernaam
+            // 
+            this.Gebruikernaam.HeaderText = "Gebruikersnaam";
+            this.Gebruikernaam.Name = "Gebruikernaam";
+            this.Gebruikernaam.ReadOnly = true;
+            // 
+            // Toegangsrechten
+            // 
+            this.Toegangsrechten.HeaderText = "Toegangsrechten";
+            this.Toegangsrechten.Name = "Toegangsrechten";
+            this.Toegangsrechten.ReadOnly = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.addUserButton);
+            this.flowLayoutPanel1.Controls.Add(this.changeUserButton);
+            this.flowLayoutPanel1.Controls.Add(this.removeUserButton);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(296, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(127, 89);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // addUserButton
+            // 
+            this.addUserButton.AutoSize = true;
+            this.addUserButton.Location = new System.Drawing.Point(3, 3);
+            this.addUserButton.Name = "addUserButton";
+            this.addUserButton.Size = new System.Drawing.Size(121, 23);
+            this.addUserButton.TabIndex = 0;
+            this.addUserButton.Text = "Gebruiker Toevoegen";
+            this.addUserButton.UseVisualStyleBackColor = true;
+            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
+            // 
+            // changeUserButton
+            // 
+            this.changeUserButton.AutoSize = true;
+            this.changeUserButton.Location = new System.Drawing.Point(18, 32);
+            this.changeUserButton.Name = "changeUserButton";
+            this.changeUserButton.Size = new System.Drawing.Size(106, 23);
+            this.changeUserButton.TabIndex = 1;
+            this.changeUserButton.Text = "Gebruiker Wijzigen";
+            this.changeUserButton.UseVisualStyleBackColor = true;
+            this.changeUserButton.Click += new System.EventHandler(this.changeUserButton_Click);
+            // 
+            // removeUserButton
+            // 
+            this.removeUserButton.AutoSize = true;
+            this.removeUserButton.Location = new System.Drawing.Point(3, 61);
+            this.removeUserButton.Name = "removeUserButton";
+            this.removeUserButton.Size = new System.Drawing.Size(121, 23);
+            this.removeUserButton.TabIndex = 3;
+            this.removeUserButton.Text = "Gebruiker Verwijderen";
+            this.removeUserButton.UseVisualStyleBackColor = true;
+            this.removeUserButton.Click += new System.EventHandler(this.removeUserButton_Click);
+            // 
+            // filterTextBox
+            // 
+            this.filterTextBox.Location = new System.Drawing.Point(73, 12);
+            this.filterTextBox.Name = "filterTextBox";
+            this.filterTextBox.Size = new System.Drawing.Size(100, 20);
+            this.filterTextBox.TabIndex = 1;
+            this.filterTextBox.TextChanged += new System.EventHandler(this.filterTextBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Filter:";
+            // 
+            // AgendaTab
+            // 
+            this.AgendaTab.Location = new System.Drawing.Point(4, 22);
+            this.AgendaTab.Name = "AgendaTab";
+            this.AgendaTab.Size = new System.Drawing.Size(423, 278);
+            this.AgendaTab.TabIndex = 5;
+            this.AgendaTab.Text = "Agenda";
+            this.AgendaTab.UseVisualStyleBackColor = true;
             // 
             // ClientApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 542);
+            this.ClientSize = new System.Drawing.Size(431, 304);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientApplication";
             this.Text = "Beheer Systeem";
             this.tabControl1.ResumeLayout(false);
+            this.gebruikersTab.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -127,12 +269,22 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage projectLijstTab;
+        private System.Windows.Forms.TabPage werkOpdrachtenTab;
+        private System.Windows.Forms.TabPage werkBonnenTab;
+        private System.Windows.Forms.TabPage OpdrachtgeversTab;
+        private System.Windows.Forms.TabPage gebruikersTab;
+        private System.Windows.Forms.TabPage AgendaTab;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridView usersDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gebruikernaam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Toegangsrechten;
+        private System.Windows.Forms.TextBox filterTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button addUserButton;
+        private System.Windows.Forms.Button changeUserButton;
+        private System.Windows.Forms.Button removeUserButton;
     }
 }
 
