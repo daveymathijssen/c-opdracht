@@ -11,6 +11,7 @@ namespace ClientApplication
         private string username;
         private User.AccessRights accessRights;
         private List<User> users;
+        private List<Werkbon> werkbonnen;
 
         public ClientApplication(Network network, string username, User.AccessRights accessRights)
         {
@@ -18,6 +19,7 @@ namespace ClientApplication
             this.network = network;
             this.username = username;
             this.accessRights = accessRights;
+            Agenda();
 
             User.AccessRights allRights = User.AccessRights.Leidinggevende | User.AccessRights.KantoorMedewerker;
             User.AccessRights viewRights = User.AccessRights.Kitter;
@@ -46,8 +48,15 @@ namespace ClientApplication
                 case "gebruikersTab":
                     UsersTab();
                     break;
+                case "agendaTab":
+                    Agenda();
+                    break;
             }
         }
+
+        /// <summary>
+        /// The werknemer tab:
+        /// </summary>
 
         //Fills users tab: 
         private void UsersTab()
@@ -140,6 +149,55 @@ namespace ClientApplication
                     }
                 }
             }     
+        }
+
+        /// <summary>
+        /// The Agenda tab
+        /// </summary>
+
+        private void Agenda()
+        {
+            werkbonnen = new List<Werkbon>();
+            werkbonnen.Add(new Werkbon("hoi"));
+            werkbonnen.Add(new Werkbon("doei"));
+            fillWerkbonList();
+            //get werkbonnen van server hier
+
+
+        }
+
+        private void fillWerkbonList()
+        {
+            //Filling them in list:
+            DateTime day = werkbonCalander.SelectionRange.Start;
+            werkbonList.DataSource = null;
+            List<Werkbon> dayList = new List<Werkbon>();
+            foreach (Werkbon werkbon in werkbonnen)
+            {
+                //check if datum is zelfde:
+                dayList.Add(werkbon);
+            }
+            werkbonList.DataSource = dayList;
+
+            //Filling the not yet used werkbonnen:
+            werkbonComboBox.Items.Clear();
+            foreach (Werkbon werkbon in werkbonnen)
+            {
+                //check if datum is null:
+                werkbonComboBox.Items.Add(werkbon);
+            }
+        }
+
+        private void addButon_Click(object sender, EventArgs e)
+        {
+            DateTime day = werkbonCalander.SelectionRange.Start;
+            Werkbon werkbon = (Werkbon) werkbonComboBox.SelectedItem;
+            //alter the datetime field in werkbon 
+        }
+
+        private void werkbonCalander_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            fillWerkbonList();
         }
     }
 }
