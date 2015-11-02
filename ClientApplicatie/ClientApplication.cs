@@ -158,8 +158,8 @@ namespace ClientApplication
         private void Agenda()
         {
             werkbonnen = new List<Werkbon>();
-            werkbonnen.Add(new Werkbon("hoi"));
-            werkbonnen.Add(new Werkbon("doei"));
+           // werkbonnen.Add(new Werkbon("hoi"));
+           // werkbonnen.Add(new Werkbon("doei"));
             fillWerkbonList();
             //get werkbonnen van server hier
 
@@ -174,8 +174,8 @@ namespace ClientApplication
             List<Werkbon> dayList = new List<Werkbon>();
             foreach (Werkbon werkbon in werkbonnen)
             {
-                //check if datum is zelfde:
-                dayList.Add(werkbon);
+                if(werkbon.uitvoerDatum.Equals(day))
+                    dayList.Add(werkbon);
             }
             werkbonList.DataSource = dayList;
 
@@ -183,8 +183,8 @@ namespace ClientApplication
             werkbonComboBox.Items.Clear();
             foreach (Werkbon werkbon in werkbonnen)
             {
-                //check if datum is null:
-                werkbonComboBox.Items.Add(werkbon);
+                if(werkbon.uitvoerDatum == null)
+                    werkbonComboBox.Items.Add(werkbon);
             }
         }
 

@@ -30,10 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientApplication));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.projectLijstTab = new System.Windows.Forms.TabPage();
-            this.werkOpdrachtenTab = new System.Windows.Forms.TabPage();
-            this.werkBonnenTab = new System.Windows.Forms.TabPage();
-            this.OpdrachtgeversTab = new System.Windows.Forms.TabPage();
+            this.agendaTab = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.addButon = new System.Windows.Forms.Button();
+            this.werkbonComboBox = new System.Windows.Forms.ComboBox();
+            this.werkbonCalander = new System.Windows.Forms.MonthCalendar();
+            this.werkbonList = new System.Windows.Forms.ListBox();
             this.gebruikersTab = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.usersDataGridView = new System.Windows.Forms.DataGridView();
@@ -45,14 +48,17 @@
             this.removeUserButton = new System.Windows.Forms.Button();
             this.filterTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.agendaTab = new System.Windows.Forms.TabPage();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.werkbonList = new System.Windows.Forms.ListBox();
-            this.werkbonCalander = new System.Windows.Forms.MonthCalendar();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.addButon = new System.Windows.Forms.Button();
-            this.werkbonComboBox = new System.Windows.Forms.ComboBox();
+            this.projectLijstTab = new System.Windows.Forms.TabPage();
+            this.werkOpdrachtenTab = new System.Windows.Forms.TabPage();
+            this.werkBonnenTab = new System.Windows.Forms.TabPage();
+            this.OpdrachtgeversTab = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
+            this.agendaTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.gebruikersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -60,12 +66,6 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            this.agendaTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -84,43 +84,82 @@
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // projectLijstTab
+            // agendaTab
             // 
-            this.projectLijstTab.Location = new System.Drawing.Point(4, 22);
-            this.projectLijstTab.Name = "projectLijstTab";
-            this.projectLijstTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projectLijstTab.Size = new System.Drawing.Size(423, 278);
-            this.projectLijstTab.TabIndex = 0;
-            this.projectLijstTab.Text = "Projectlijst";
-            this.projectLijstTab.UseVisualStyleBackColor = true;
+            this.agendaTab.Controls.Add(this.splitContainer2);
+            this.agendaTab.Location = new System.Drawing.Point(4, 22);
+            this.agendaTab.Name = "agendaTab";
+            this.agendaTab.Size = new System.Drawing.Size(423, 278);
+            this.agendaTab.TabIndex = 5;
+            this.agendaTab.Text = "Agenda";
+            this.agendaTab.UseVisualStyleBackColor = true;
             // 
-            // werkOpdrachtenTab
+            // splitContainer2
             // 
-            this.werkOpdrachtenTab.Location = new System.Drawing.Point(4, 22);
-            this.werkOpdrachtenTab.Name = "werkOpdrachtenTab";
-            this.werkOpdrachtenTab.Padding = new System.Windows.Forms.Padding(3);
-            this.werkOpdrachtenTab.Size = new System.Drawing.Size(423, 278);
-            this.werkOpdrachtenTab.TabIndex = 1;
-            this.werkOpdrachtenTab.Text = "Werkopdrachten";
-            this.werkOpdrachtenTab.UseVisualStyleBackColor = true;
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
             // 
-            // werkBonnenTab
+            // splitContainer2.Panel1
             // 
-            this.werkBonnenTab.Location = new System.Drawing.Point(4, 22);
-            this.werkBonnenTab.Name = "werkBonnenTab";
-            this.werkBonnenTab.Size = new System.Drawing.Size(423, 278);
-            this.werkBonnenTab.TabIndex = 2;
-            this.werkBonnenTab.Text = "Werkbonnen";
-            this.werkBonnenTab.UseVisualStyleBackColor = true;
+            this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanel2);
+            this.splitContainer2.Panel1.Controls.Add(this.werkbonCalander);
             // 
-            // OpdrachtgeversTab
+            // splitContainer2.Panel2
             // 
-            this.OpdrachtgeversTab.Location = new System.Drawing.Point(4, 22);
-            this.OpdrachtgeversTab.Name = "OpdrachtgeversTab";
-            this.OpdrachtgeversTab.Size = new System.Drawing.Size(423, 278);
-            this.OpdrachtgeversTab.TabIndex = 3;
-            this.OpdrachtgeversTab.Text = "Opdrachtgevers";
-            this.OpdrachtgeversTab.UseVisualStyleBackColor = true;
+            this.splitContainer2.Panel2.Controls.Add(this.werkbonList);
+            this.splitContainer2.Size = new System.Drawing.Size(423, 278);
+            this.splitContainer2.SplitterDistance = 230;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.Controls.Add(this.addButon);
+            this.flowLayoutPanel2.Controls.Add(this.werkbonComboBox);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 249);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(230, 29);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // addButon
+            // 
+            this.addButon.Location = new System.Drawing.Point(152, 3);
+            this.addButon.Name = "addButon";
+            this.addButon.Size = new System.Drawing.Size(75, 23);
+            this.addButon.TabIndex = 0;
+            this.addButon.Text = "Voeg Toe";
+            this.addButon.UseVisualStyleBackColor = true;
+            this.addButon.Click += new System.EventHandler(this.addButon_Click);
+            // 
+            // werkbonComboBox
+            // 
+            this.werkbonComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.werkbonComboBox.FormattingEnabled = true;
+            this.werkbonComboBox.Location = new System.Drawing.Point(25, 3);
+            this.werkbonComboBox.Name = "werkbonComboBox";
+            this.werkbonComboBox.Size = new System.Drawing.Size(121, 21);
+            this.werkbonComboBox.TabIndex = 1;
+            // 
+            // werkbonCalander
+            // 
+            this.werkbonCalander.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.werkbonCalander.Location = new System.Drawing.Point(0, 0);
+            this.werkbonCalander.MaxSelectionCount = 1;
+            this.werkbonCalander.Name = "werkbonCalander";
+            this.werkbonCalander.TabIndex = 1;
+            this.werkbonCalander.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.werkbonCalander_DateChanged);
+            // 
+            // werkbonList
+            // 
+            this.werkbonList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.werkbonList.FormattingEnabled = true;
+            this.werkbonList.Location = new System.Drawing.Point(0, 0);
+            this.werkbonList.Name = "werkbonList";
+            this.werkbonList.Size = new System.Drawing.Size(189, 278);
+            this.werkbonList.TabIndex = 0;
             // 
             // gebruikersTab
             // 
@@ -246,82 +285,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Filter:";
             // 
-            // agendaTab
+            // projectLijstTab
             // 
-            this.agendaTab.Controls.Add(this.splitContainer2);
-            this.agendaTab.Location = new System.Drawing.Point(4, 22);
-            this.agendaTab.Name = "agendaTab";
-            this.agendaTab.Size = new System.Drawing.Size(423, 278);
-            this.agendaTab.TabIndex = 5;
-            this.agendaTab.Text = "Agenda";
-            this.agendaTab.UseVisualStyleBackColor = true;
+            this.projectLijstTab.Location = new System.Drawing.Point(4, 22);
+            this.projectLijstTab.Name = "projectLijstTab";
+            this.projectLijstTab.Padding = new System.Windows.Forms.Padding(3);
+            this.projectLijstTab.Size = new System.Drawing.Size(423, 278);
+            this.projectLijstTab.TabIndex = 0;
+            this.projectLijstTab.Text = "Projectlijst";
+            this.projectLijstTab.UseVisualStyleBackColor = true;
             // 
-            // splitContainer2
+            // werkOpdrachtenTab
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
+            this.werkOpdrachtenTab.Location = new System.Drawing.Point(4, 22);
+            this.werkOpdrachtenTab.Name = "werkOpdrachtenTab";
+            this.werkOpdrachtenTab.Padding = new System.Windows.Forms.Padding(3);
+            this.werkOpdrachtenTab.Size = new System.Drawing.Size(423, 278);
+            this.werkOpdrachtenTab.TabIndex = 1;
+            this.werkOpdrachtenTab.Text = "Werkopdrachten";
+            this.werkOpdrachtenTab.UseVisualStyleBackColor = true;
             // 
-            // splitContainer2.Panel1
+            // werkBonnenTab
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanel2);
-            this.splitContainer2.Panel1.Controls.Add(this.werkbonCalander);
+            this.werkBonnenTab.Location = new System.Drawing.Point(4, 22);
+            this.werkBonnenTab.Name = "werkBonnenTab";
+            this.werkBonnenTab.Size = new System.Drawing.Size(423, 278);
+            this.werkBonnenTab.TabIndex = 2;
+            this.werkBonnenTab.Text = "Werkbonnen";
+            this.werkBonnenTab.UseVisualStyleBackColor = true;
             // 
-            // splitContainer2.Panel2
+            // OpdrachtgeversTab
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.werkbonList);
-            this.splitContainer2.Size = new System.Drawing.Size(423, 278);
-            this.splitContainer2.SplitterDistance = 230;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // werkbonList
-            // 
-            this.werkbonList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.werkbonList.FormattingEnabled = true;
-            this.werkbonList.Location = new System.Drawing.Point(0, 0);
-            this.werkbonList.Name = "werkbonList";
-            this.werkbonList.Size = new System.Drawing.Size(189, 278);
-            this.werkbonList.TabIndex = 0;
-            // 
-            // werkbonCalander
-            // 
-            this.werkbonCalander.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.werkbonCalander.Location = new System.Drawing.Point(0, 0);
-            this.werkbonCalander.MaxSelectionCount = 1;
-            this.werkbonCalander.Name = "werkbonCalander";
-            this.werkbonCalander.TabIndex = 1;
-            this.werkbonCalander.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.werkbonCalander_DateChanged);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.addButon);
-            this.flowLayoutPanel2.Controls.Add(this.werkbonComboBox);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 249);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(230, 29);
-            this.flowLayoutPanel2.TabIndex = 2;
-            // 
-            // addButon
-            // 
-            this.addButon.Location = new System.Drawing.Point(152, 3);
-            this.addButon.Name = "addButon";
-            this.addButon.Size = new System.Drawing.Size(75, 23);
-            this.addButon.TabIndex = 0;
-            this.addButon.Text = "Voeg Toe";
-            this.addButon.UseVisualStyleBackColor = true;
-            this.addButon.Click += new System.EventHandler(this.addButon_Click);
-            // 
-            // werkbonComboBox
-            // 
-            this.werkbonComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.werkbonComboBox.FormattingEnabled = true;
-            this.werkbonComboBox.Location = new System.Drawing.Point(25, 3);
-            this.werkbonComboBox.Name = "werkbonComboBox";
-            this.werkbonComboBox.Size = new System.Drawing.Size(121, 21);
-            this.werkbonComboBox.TabIndex = 1;
+            this.OpdrachtgeversTab.Location = new System.Drawing.Point(4, 22);
+            this.OpdrachtgeversTab.Name = "OpdrachtgeversTab";
+            this.OpdrachtgeversTab.Size = new System.Drawing.Size(423, 278);
+            this.OpdrachtgeversTab.TabIndex = 3;
+            this.OpdrachtgeversTab.Text = "Opdrachtgevers";
+            this.OpdrachtgeversTab.UseVisualStyleBackColor = true;
             // 
             // ClientApplication
             // 
@@ -333,6 +333,13 @@
             this.Name = "ClientApplication";
             this.Text = "Beheer Systeem";
             this.tabControl1.ResumeLayout(false);
+            this.agendaTab.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.gebruikersTab.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -342,13 +349,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.agendaTab.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

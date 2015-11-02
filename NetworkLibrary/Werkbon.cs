@@ -11,7 +11,7 @@ namespace NetworkLibrary
     {
         public string werkbon { get; }
         public DateTime aanmaakDatum;
-        public DateTime uitvoerDatum;
+        public DateTime uitvoerDatum { get; set; }
         public Bedrijf bedrijf;
         public string werkomschrijving;
         public List<User> werknemers;
