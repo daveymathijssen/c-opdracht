@@ -132,6 +132,7 @@ namespace ClientApplication
                 {
                     users.Add(form.user);
                     //Send users to server
+                    network.AddUser(form.user);
                     fillUsersList();
                 }
                 form.Dispose();

@@ -83,6 +83,11 @@ namespace ClientApplication
             return users;
         }
 
+        public void AddUser(User user)
+        {
+            network.sendPacket(new PacketAddUser(user));
+        }
+
         public void GetUsersResponse(List<User> users)
         {
             this.users = users;

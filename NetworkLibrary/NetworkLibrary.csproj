@@ -43,6 +43,7 @@
     <Compile Include="Bedrijf.cs" />
     <Compile Include="ClientInterface.cs" />
     <Compile Include="NetworkCommunication.cs" />
+    <Compile Include="Packets\PacketAddUser.cs" />
     <Compile Include="Packets\PacketGetUsers.cs" />
     <Compile Include="Packets\PacketGetUsersResponse.cs" />
     <Compile Include="Packets\PacketGetWerkbonnen.cs" />
