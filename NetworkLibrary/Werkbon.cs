@@ -24,7 +24,11 @@ namespace NetworkLibrary
             this.werkomschrijving = werkomschrijving;
             this.werknemers = werknemers;
             this.aanmaakDatum = DateTime.Today;
+        }
 
+        public override string ToString()
+        {
+            return werkbon + "," + bedrijf;
         }
 
     }

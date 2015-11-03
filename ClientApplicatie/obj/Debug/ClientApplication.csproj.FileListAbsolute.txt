@@ -36,3 +36,16 @@ C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ClientApplicatie\obj\Debug\Client
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.pdb
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.AlterUser.resources
 D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.AlterUser.resources
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\bin\Debug\ClientApplication.exe.config
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.exe
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\bin\Debug\ClientApplication.exe
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\bin\Debug\ClientApplication.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\bin\Debug\NetworkLibrary.dll
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\bin\Debug\NetworkLibrary.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.csprojResolveAssemblyReference.cache
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.AlterUser.resources
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.ClientApplication.resources
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.Login.resources
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.Properties.Resources.resources
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.csproj.GenerateResource.Cache

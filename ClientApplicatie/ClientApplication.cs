@@ -167,9 +167,11 @@ namespace ClientApplication
             werkbonnen = new List<Werkbon>();
            // werkbonnen.Add(new Werkbon("hoi"));
            // werkbonnen.Add(new Werkbon("doei"));
-            fillWerkbonList();
+            
             //get werkbonnen van server hier
             werkbonnen = network.GetWerkbonnen();
+            System.Diagnostics.Debug.WriteLine("hoi: " + werkbonnen.Count);
+            fillWerkbonList();
 
         }
 
@@ -190,7 +192,7 @@ namespace ClientApplication
             werkbonComboBox.Items.Clear();
             foreach (Werkbon werkbon in werkbonnen)
             {
-                if(werkbon.uitvoerDatum == null)
+                if(werkbon.uitvoerDatum == DateTime.MinValue)
                     werkbonComboBox.Items.Add(werkbon);
             }
         }
@@ -199,7 +201,10 @@ namespace ClientApplication
         {
             DateTime day = werkbonCalander.SelectionRange.Start;
             Werkbon werkbon = (Werkbon) werkbonComboBox.SelectedItem;
+            System.Diagnostics.Debug.WriteLine(werkbon.werkbon);
             //alter the datetime field in werkbon 
+            werkbon.uitvoerDatum = day;
+            fillWerkbonList();
         }
 
         private void werkbonCalander_DateChanged(object sender, DateRangeEventArgs e)

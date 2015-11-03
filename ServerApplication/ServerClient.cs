@@ -128,7 +128,7 @@ namespace ServerApplication
 
         public void GetWerkbonnen()
         {
-            Console.WriteLine("Someone is requesting all werkbonnen");
+            Console.WriteLine("Someone is requesting all werkbonnen " + server.werkbonnen.Count);
             NetworkCommunication.SendPacket(new PacketGetWerkbonnenResponse(server.werkbonnen), stream);
         }
 

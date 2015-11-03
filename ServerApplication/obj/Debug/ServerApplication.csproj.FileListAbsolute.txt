@@ -30,3 +30,11 @@ D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\c-opdracht\ServerApplication\bin\
 D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\c-opdracht\ServerApplication\bin\Debug\NetworkLibrary.dll
 D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\c-opdracht\ServerApplication\bin\Debug\NetworkLibrary.pdb
 D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\c-opdracht\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\bin\Debug\ServerApplication.exe.config
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\obj\Debug\ServerApplication.exe
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\obj\Debug\ServerApplication.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\bin\Debug\ServerApplication.exe
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\bin\Debug\ServerApplication.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\bin\Debug\NetworkLibrary.dll
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\bin\Debug\NetworkLibrary.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache

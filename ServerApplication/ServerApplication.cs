@@ -29,16 +29,24 @@ namespace ServerApplication
         {
             //load all users
             users = FileIO.LoadUsers();
+            werkbonnen = FileIO.LoadWerkbonnen();
 
             //Do not uncomment or users will be added multiple times
-            //AddNewUser(new User("Davey","Davey",User.AccessRights.Leidinggevende));
+           // AddNewUser(new User("Davey","Davey",User.AccessRights.Leidinggevende));
+            
             //AddNewUser(new User("Wesley","Wesley",User.AccessRights.KantoorMedewerker));
             //AddNewUser(new User("Klaas", "Klaas", User.AccessRights.Kitter));
 
             //Do not uncomment or werkbonnen will be added multiple times
-            //List<User> testusers = new List<User>();
-            //testusers.Add(new User("Klaas", "Klaas", User.AccessRights.Kitter));
-            //AddNewWerkbon(new Werkbon("2015002", "Avans", new DateTime(2015, 11, 3), "Super coole werkopdracht want Yolo", testusers));
+            List<User> testusers = new List<User>();
+            testusers.Add(new User("Klaas", "Klaas", User.AccessRights.Kitter));
+            //AddNewWerkbon(new Werkbon("2015003", "Apple",DateTime.MinValue, "Super coole werkopdracht want Yolo2", testusers));
+            //AddNewWerkbon(new Werkbon("2015004", "Microsoft", DateTime.MinValue, "Super coole werkopdracht want Yolo2", testusers));
+            //AddNewWerkbon(new Werkbon("2015005", "Dell", DateTime.MinValue, "Super coole werkopdracht want Yolo2", testusers));
+            //AddNewWerkbon(new Werkbon("2015006", "Msi", DateTime.MinValue, "Super coole werkopdracht want Yolo2", testusers));
+            //AddNewWerkbon(new Werkbon("2015007", "Samsung", DateTime.MinValue, "Super coole werkopdracht want Yolo2", testusers));
+            //AddNewWerkbon(new Werkbon("2015008", "Htc", DateTime.MinValue, "Super coole werkopdracht want Yolo2", testusers));
+            //AddNewWerkbon(new Werkbon("2015009", "Lg", DateTime.MinValue, "Super coole werkopdracht want Yolo2", testusers));
 
             ConnectedClients = new List<ServerClient>();
             //Starting listening to incomming clients: 

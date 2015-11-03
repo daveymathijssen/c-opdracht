@@ -18,3 +18,8 @@ C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\NetworkLibrary\bin\Debug\NetworkL
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\NetworkLibrary\obj\Debug\NetworkLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\NetworkLibrary\obj\Debug\NetworkLibrary.dll
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\NetworkLibrary\obj\Debug\NetworkLibrary.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\NetworkLibrary\bin\Debug\NetworkLibrary.dll
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\NetworkLibrary\bin\Debug\NetworkLibrary.pdb
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\NetworkLibrary\obj\Debug\NetworkLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\NetworkLibrary\obj\Debug\NetworkLibrary.dll
+C:\Users\Beer-msi\Documents\GitHub\c# periode\c-opdracht\NetworkLibrary\obj\Debug\NetworkLibrary.pdb
