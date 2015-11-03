@@ -167,7 +167,7 @@
             this.gebruikersTab.Controls.Add(this.splitContainer1);
             this.gebruikersTab.Location = new System.Drawing.Point(4, 22);
             this.gebruikersTab.Name = "gebruikersTab";
-            this.gebruikersTab.Size = new System.Drawing.Size(423, 278);
+            this.gebruikersTab.Size = new System.Drawing.Size(713, 404);
             this.gebruikersTab.TabIndex = 4;
             this.gebruikersTab.Text = "Gebruikers";
             this.gebruikersTab.UseVisualStyleBackColor = true;
@@ -188,8 +188,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Panel2.Controls.Add(this.filterTextBox);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(423, 278);
-            this.splitContainer1.SplitterDistance = 185;
+            this.splitContainer1.Size = new System.Drawing.Size(713, 404);
+            this.splitContainer1.SplitterDistance = 268;
             this.splitContainer1.TabIndex = 1;
             // 
             // usersDataGridView
@@ -207,7 +207,7 @@
             this.usersDataGridView.Location = new System.Drawing.Point(0, 0);
             this.usersDataGridView.Name = "usersDataGridView";
             this.usersDataGridView.ReadOnly = true;
-            this.usersDataGridView.Size = new System.Drawing.Size(423, 185);
+            this.usersDataGridView.Size = new System.Drawing.Size(713, 268);
             this.usersDataGridView.TabIndex = 0;
             // 
             // Gebruikernaam
@@ -230,9 +230,9 @@
             this.flowLayoutPanel1.Controls.Add(this.removeUserButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(296, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(586, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(127, 89);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(127, 132);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // addUserButton
@@ -291,7 +291,7 @@
             this.projectLijstTab.Location = new System.Drawing.Point(4, 22);
             this.projectLijstTab.Name = "projectLijstTab";
             this.projectLijstTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projectLijstTab.Size = new System.Drawing.Size(423, 278);
+            this.projectLijstTab.Size = new System.Drawing.Size(713, 404);
             this.projectLijstTab.TabIndex = 0;
             this.projectLijstTab.Text = "Projectlijst";
             this.projectLijstTab.UseVisualStyleBackColor = true;
@@ -301,7 +301,7 @@
             this.werkOpdrachtenTab.Location = new System.Drawing.Point(4, 22);
             this.werkOpdrachtenTab.Name = "werkOpdrachtenTab";
             this.werkOpdrachtenTab.Padding = new System.Windows.Forms.Padding(3);
-            this.werkOpdrachtenTab.Size = new System.Drawing.Size(423, 278);
+            this.werkOpdrachtenTab.Size = new System.Drawing.Size(713, 404);
             this.werkOpdrachtenTab.TabIndex = 1;
             this.werkOpdrachtenTab.Text = "Werkopdrachten";
             this.werkOpdrachtenTab.UseVisualStyleBackColor = true;
@@ -310,7 +310,7 @@
             // 
             this.werkBonnenTab.Location = new System.Drawing.Point(4, 22);
             this.werkBonnenTab.Name = "werkBonnenTab";
-            this.werkBonnenTab.Size = new System.Drawing.Size(423, 278);
+            this.werkBonnenTab.Size = new System.Drawing.Size(713, 404);
             this.werkBonnenTab.TabIndex = 2;
             this.werkBonnenTab.Text = "Werkbonnen";
             this.werkBonnenTab.UseVisualStyleBackColor = true;
@@ -319,7 +319,7 @@
             // 
             this.OpdrachtgeversTab.Location = new System.Drawing.Point(4, 22);
             this.OpdrachtgeversTab.Name = "OpdrachtgeversTab";
-            this.OpdrachtgeversTab.Size = new System.Drawing.Size(423, 278);
+            this.OpdrachtgeversTab.Size = new System.Drawing.Size(713, 404);
             this.OpdrachtgeversTab.TabIndex = 3;
             this.OpdrachtgeversTab.Text = "Opdrachtgevers";
             this.OpdrachtgeversTab.UseVisualStyleBackColor = true;

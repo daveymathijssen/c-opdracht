@@ -1,6 +1,7 @@
 ﻿using NetworkLibrary;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ClientApplication
@@ -66,12 +67,7 @@ namespace ClientApplication
         //Fills users tab: 
         private void UsersTab()
         {
-            //test data
-            //users = new List<User>();
-            //users.Add(new User("Davey", "Davey", User.AccessRights.Leidinggevende));
-            //users.Add(new User("Wesley", "Wesley", User.AccessRights.KantoorMedewerker));
 
-            //get users from network here...
             users = network.GetUsers();
             fillUsersList();
         }
@@ -112,6 +108,7 @@ namespace ClientApplication
             for (int x = users.Count - 1; x >= 0; x--)
                 if (users[x].username.Equals(username))
                     users.RemoveAt(x);
+            network.SaveUsers(users);
             fillUsersList();
             //Send users to server here:
             //Not yet...
@@ -154,6 +151,7 @@ namespace ClientApplication
                     {
                         //Send users to server
                         fillUsersList();
+                        network.SaveUsers(users);
                         form.Dispose();
                     }
                 }
@@ -166,15 +164,47 @@ namespace ClientApplication
         private void Agenda()
         {
             werkbonnen = new List<Werkbon>();
-           // werkbonnen.Add(new Werkbon("hoi"));
-           // werkbonnen.Add(new Werkbon("doei"));
-            
-            //get werkbonnen van server hier
-            werkbonnen = network.GetWerkbonnen();
-            System.Diagnostics.Debug.WriteLine("hoi: " + werkbonnen.Count);
-            fillWerkbonList();
-
+            new Thread(() =>
+            {
+                werkbonnen = network.GetWerkbonnen();
+                fillWerkbonList();
+            }).Start();                    
         }
+
+        delegate void SetListBoxCallBack(List<Werkbon> dayList);
+
+        private void SetListBox(List<Werkbon> dayList)
+        {
+            if (werkbonList.InvokeRequired)
+            {
+                try
+                {
+                    SetListBoxCallBack d = new SetListBoxCallBack(SetListBox);
+                    this.Invoke(d, new object[] { dayList });
+                }
+                catch (Exception e) { }
+            }
+            else
+                werkbonList.DataSource = dayList;
+        }
+
+        delegate void SetComboBoxCallBack(Werkbon werkbonnen);
+
+        private void SetComboBox(Werkbon werkbon)
+        {
+            if (werkbonList.InvokeRequired)
+            {
+                try
+                {
+                    SetComboBoxCallBack d = new SetComboBoxCallBack(SetComboBox);
+                    this.Invoke(d, new object[] { werkbon });
+                }
+                catch (Exception e) { }
+            }
+            else
+                werkbonComboBox.Items.Add(werkbon);
+        }
+
 
         private void fillWerkbonList()
         {
@@ -187,15 +217,16 @@ namespace ClientApplication
                 if(werkbon.uitvoerDatum.Equals(day))
                     dayList.Add(werkbon);
             }
-            werkbonList.DataSource = dayList;
+            SetListBox(dayList);
 
             //Filling the not yet used werkbonnen:
             werkbonComboBox.Items.Clear();
             foreach (Werkbon werkbon in werkbonnen)
             {
-                if(werkbon.uitvoerDatum == DateTime.MinValue)
-                    werkbonComboBox.Items.Add(werkbon);
+                if (werkbon.uitvoerDatum == DateTime.MinValue)
+                    SetComboBox(werkbon);
             }
+            werkbonComboBox.SelectedIndex = 0;
         }
 
         private void addButon_Click(object sender, EventArgs e)
@@ -205,6 +236,7 @@ namespace ClientApplication
             System.Diagnostics.Debug.WriteLine(werkbon.werkbon);
             //alter the datetime field in werkbon 
             werkbon.uitvoerDatum = day;
+            network.SaveWerkbonnen(werkbonnen);
             fillWerkbonList();
         }
 

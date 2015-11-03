@@ -1,4 +1,6 @@
-﻿namespace NetworkLibrary
+﻿using System.Collections.Generic;
+
+namespace NetworkLibrary
 {
     public interface ServerInterface
     {
@@ -7,5 +9,7 @@
         void SaveWerkbon(Werkbon werkbon);
         void GetUsers();
         void GetWerkbonnen();
+        void NewWerkbonnen(List<Werkbon> werkbonnen);
+        void NewUsers(List<User> users);
     }
 }

@@ -132,6 +132,16 @@ namespace ServerApplication
             NetworkCommunication.SendPacket(new PacketGetWerkbonnenResponse(server.werkbonnen), stream);
         }
 
+        public void NewWerkbonnen(List<Werkbon> werkbonnen)
+        {
+            server.werkbonnen = werkbonnen;
+            FileIO.SaveWerkbonnen(server.werkbonnen);
+        }
 
+        public void NewUsers(List<User> users)
+        {
+            server.users = users;
+            FileIO.SaveUsers(server.users);
+        }
     }
 }

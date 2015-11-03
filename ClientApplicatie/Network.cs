@@ -92,5 +92,15 @@ namespace ClientApplication
         {
             this.users = users;
         }
+
+        public void SaveWerkbonnen(List<Werkbon> werkbonnen)
+        {
+            network.sendPacket(new PacketSendWerkbonnen(werkbonnen));
+        }
+
+        public void SaveUsers(List<User> users)
+        {
+            network.sendPacket(new PacketSendUsers(users));
+        }
     }
 }
