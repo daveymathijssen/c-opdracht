@@ -90,6 +90,9 @@ namespace ServerApplication
             Console.WriteLine("Succesfully created new user {0} with password {1}.", newUser.username, newUser.password);
         }
 
+        /// <summary>
+        /// Check if the werkbon exist, if not add the werkbon to the werkbon file, otherwise update werkbon.</summary>
+        /// <param name="werkbon">The werkbon to be added/updated</param>
         public void SaveWerkbon(Werkbon werkbon)
         {
             int werkbonID = -1;
@@ -102,7 +105,7 @@ namespace ServerApplication
                 if (werkbon.werkbon == oldWerkbon.werkbon)
                 {
                     newWerkbon = false;
-                   // werkbonID = werkbon.werkbon.;
+                    break;
                 }
             }
             if (newWerkbon)
@@ -112,27 +115,23 @@ namespace ServerApplication
             }
             else
             {
-                //server.UpdateWerkbon();
+                server.UpdateWerkbon(werkbon, werkbonID);
                 //NetworkCommunication.SendPacket(new PacketSaveWerkbonResponse(true, user.accessRights), stream);
-
             }
-
-
-
-            //if (PasswordHash.ValidatePassword(password, user.password))
-            //{
-            //   NetworkCommunication.SendPacket(new PacketLoginResponse(true, user.accessRights), stream);
-            //  Console.WriteLine("{0} succesfully logged in.", username);
-            //  this.user = user;
-            //  break;
-            //}
-            //else //wrong password
-            //{
-            //   Console.WriteLine("wrong password");
-            //  NetworkCommunication.SendPacket(new PacketLoginResponse(false, user.accessRights), stream);
-            // break;
-            //}
         }
+
+        public void GetUsers()
+        {
+            Console.WriteLine("Someone is requesting all users");
+            NetworkCommunication.SendPacket(new PacketGetUsersResponse(server.users), stream);
+        }
+
+        public void GetWerkbonnen()
+        {
+            Console.WriteLine("Someone is requesting all werkbonnen");
+            NetworkCommunication.SendPacket(new PacketGetWerkbonnenResponse(server.werkbonnen), stream);
+        }
+
 
     }
 }

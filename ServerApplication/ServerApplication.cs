@@ -34,7 +34,11 @@ namespace ServerApplication
             //AddNewUser(new User("Davey","Davey",User.AccessRights.Leidinggevende));
             //AddNewUser(new User("Wesley","Wesley",User.AccessRights.KantoorMedewerker));
             //AddNewUser(new User("Klaas", "Klaas", User.AccessRights.Kitter));
-            
+
+            //Do not uncomment or werkbonnen will be added multiple times
+            //List<User> testusers = new List<User>();
+            //testusers.Add(new User("Klaas", "Klaas", User.AccessRights.Kitter));
+            //AddNewWerkbon(new Werkbon("2015002", "Avans", new DateTime(2015, 11, 3), "Super coole werkopdracht want Yolo", testusers));
 
             ConnectedClients = new List<ServerClient>();
             //Starting listening to incomming clients: 
@@ -73,8 +77,10 @@ namespace ServerApplication
         /// <summary>
         /// Update werkbon with given index and save werkbonlist to local file</summary>
         /// <param name="index">The index in the werkbonnenlist that needs to be updated</param>
-        public void UpdateWerkbon(int werkbonNummer)
+        public void UpdateWerkbon(Werkbon werkbon, int werkbonIndex)
         {
+            werkbonnen.RemoveAt(werkbonIndex);
+            werkbonnen.Add(werkbon);
             FileIO.SaveWerkbonnen(werkbonnen);
         }
     }

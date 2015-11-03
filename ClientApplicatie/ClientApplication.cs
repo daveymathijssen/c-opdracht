@@ -37,6 +37,11 @@ namespace ClientApplication
             {
                 MessageBox.Show("Logged in as kitter");
                 projectLijstTab.Hide();
+                addUserButton.Hide();
+                changeUserButton.Hide();
+                removeUserButton.Hide();
+                werkbonComboBox.Hide();
+                addButon.Hide();
             }
         }
 
@@ -61,11 +66,13 @@ namespace ClientApplication
         //Fills users tab: 
         private void UsersTab()
         {
-            users = new List<User>();
-            users.Add(new User("Davey", "Davey", User.AccessRights.Leidinggevende));
-            users.Add(new User("Wesley", "Wesley", User.AccessRights.KantoorMedewerker));
+            //test data
+            //users = new List<User>();
+            //users.Add(new User("Davey", "Davey", User.AccessRights.Leidinggevende));
+            //users.Add(new User("Wesley", "Wesley", User.AccessRights.KantoorMedewerker));
 
             //get users from network here...
+            users = network.GetUsers();
             fillUsersList();
         }
 
@@ -101,12 +108,13 @@ namespace ClientApplication
         //Remove a user:
         private void removeUserButton_Click(object sender, EventArgs e)
         {
-            String username = usersDataGridView.CurrentCell.Value.ToString();
+            string username = usersDataGridView.CurrentCell.Value.ToString();
             for (int x = users.Count - 1; x >= 0; x--)
                 if (users[x].username.Equals(username))
                     users.RemoveAt(x);
             fillUsersList();
             //Send users to server here:
+            //Not yet...
         }
 
         //Add a user
@@ -154,7 +162,6 @@ namespace ClientApplication
         /// <summary>
         /// The Agenda tab
         /// </summary>
-
         private void Agenda()
         {
             werkbonnen = new List<Werkbon>();
@@ -162,7 +169,7 @@ namespace ClientApplication
            // werkbonnen.Add(new Werkbon("doei"));
             fillWerkbonList();
             //get werkbonnen van server hier
-
+            werkbonnen = network.GetWerkbonnen();
 
         }
 

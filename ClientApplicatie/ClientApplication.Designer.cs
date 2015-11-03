@@ -80,7 +80,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(431, 304);
+            this.tabControl1.Size = new System.Drawing.Size(721, 430);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -89,7 +89,7 @@
             this.agendaTab.Controls.Add(this.splitContainer2);
             this.agendaTab.Location = new System.Drawing.Point(4, 22);
             this.agendaTab.Name = "agendaTab";
-            this.agendaTab.Size = new System.Drawing.Size(423, 278);
+            this.agendaTab.Size = new System.Drawing.Size(713, 404);
             this.agendaTab.TabIndex = 5;
             this.agendaTab.Text = "Agenda";
             this.agendaTab.UseVisualStyleBackColor = true;
@@ -108,8 +108,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.werkbonList);
-            this.splitContainer2.Size = new System.Drawing.Size(423, 278);
-            this.splitContainer2.SplitterDistance = 230;
+            this.splitContainer2.Size = new System.Drawing.Size(713, 404);
+            this.splitContainer2.SplitterDistance = 387;
             this.splitContainer2.TabIndex = 0;
             // 
             // flowLayoutPanel2
@@ -119,14 +119,14 @@
             this.flowLayoutPanel2.Controls.Add(this.werkbonComboBox);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 249);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 375);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(230, 29);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(387, 29);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // addButon
             // 
-            this.addButon.Location = new System.Drawing.Point(152, 3);
+            this.addButon.Location = new System.Drawing.Point(309, 3);
             this.addButon.Name = "addButon";
             this.addButon.Size = new System.Drawing.Size(75, 23);
             this.addButon.TabIndex = 0;
@@ -138,13 +138,14 @@
             // 
             this.werkbonComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.werkbonComboBox.FormattingEnabled = true;
-            this.werkbonComboBox.Location = new System.Drawing.Point(25, 3);
+            this.werkbonComboBox.Location = new System.Drawing.Point(182, 3);
             this.werkbonComboBox.Name = "werkbonComboBox";
             this.werkbonComboBox.Size = new System.Drawing.Size(121, 21);
             this.werkbonComboBox.TabIndex = 1;
             // 
             // werkbonCalander
             // 
+            this.werkbonCalander.CalendarDimensions = new System.Drawing.Size(2, 2);
             this.werkbonCalander.Dock = System.Windows.Forms.DockStyle.Fill;
             this.werkbonCalander.Location = new System.Drawing.Point(0, 0);
             this.werkbonCalander.MaxSelectionCount = 1;
@@ -158,7 +159,7 @@
             this.werkbonList.FormattingEnabled = true;
             this.werkbonList.Location = new System.Drawing.Point(0, 0);
             this.werkbonList.Name = "werkbonList";
-            this.werkbonList.Size = new System.Drawing.Size(189, 278);
+            this.werkbonList.Size = new System.Drawing.Size(322, 404);
             this.werkbonList.TabIndex = 0;
             // 
             // gebruikersTab
@@ -327,7 +328,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 304);
+            this.ClientSize = new System.Drawing.Size(721, 430);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientApplication";

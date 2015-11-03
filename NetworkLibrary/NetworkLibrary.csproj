@@ -43,6 +43,10 @@
     <Compile Include="Bedrijf.cs" />
     <Compile Include="ClientInterface.cs" />
     <Compile Include="NetworkCommunication.cs" />
+    <Compile Include="Packets\PacketGetUsers.cs" />
+    <Compile Include="Packets\PacketGetUsersResponse.cs" />
+    <Compile Include="Packets\PacketGetWerkbonnen.cs" />
+    <Compile Include="Packets\PacketGetWerkbonnenResponse.cs" />
     <Compile Include="Packets\PacketLoginResponse.cs" />
     <Compile Include="Packets\Packet.cs" />
     <Compile Include="Packets\PacketLogin.cs" />
@@ -50,7 +54,6 @@
     <Compile Include="PBKDF2Encryption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerInterface.cs" />
-    <Compile Include="Session.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Werkbon.cs" />
     <Compile Include="Werkopdracht.cs" />

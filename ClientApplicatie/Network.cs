@@ -1,6 +1,7 @@
 ﻿using NetworkLibrary;
 using NetworkLibrary.Packets;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace ClientApplication
@@ -13,6 +14,8 @@ namespace ClientApplication
         private bool loginOk;
         private User.AccessRights accessRights;
         public String status { get; set; }
+        private List<Werkbon> werkbonnen;
+        private List<User> users;
         
 
         public Network(string ipAdress, int port)
@@ -59,6 +62,30 @@ namespace ClientApplication
             network.sendPacket(new PacketSaveWerkbon(werkbon));
             Thread.Sleep(1000);
             return true;
+        }
+
+        public List<Werkbon> GetWerkbonnen()
+        {
+            network.sendPacket(new PacketGetWerkbonnen());
+            Thread.Sleep(1000);
+            return werkbonnen;
+        }
+
+        public void GetWerkbonnenResponse(List<Werkbon> werkbonnen)
+        {
+            this.werkbonnen = werkbonnen;
+        }
+
+        public List<User> GetUsers()
+        {
+            network.sendPacket(new PacketGetUsers());
+            Thread.Sleep(1000);
+            return users;
+        }
+
+        public void GetUsersResponse(List<User> users)
+        {
+            this.users = users;
         }
     }
 }

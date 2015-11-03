@@ -35,3 +35,4 @@ C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ClientApplicatie\obj\Debug\Client
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.exe
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.pdb
 C:\Users\Beer\Documents\GitHub\c# 2\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.AlterUser.resources
+D:\avans\Jaar 2\Periode 1\RHCAPP\IP opdrachten\c-opdracht\ClientApplicatie\obj\Debug\ClientApplication.AlterUser.resources
